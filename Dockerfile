@@ -3,7 +3,7 @@ COPY graphserver.js .
 COPY package.json .
 COPY UScities.json .
 RUN npm apt-get update && apt-get upgrade -y &&\
-    apt-get install -y --no-install-recommends git git-man liblastlog2-2=2.41.5-0+deb13u1 util-linux/liblastlog2-2@2.41.5-0+deb13u1 &&\
+    apt-get install -y --no-install-recommends git git-man liblastlog2-2=2.41.5-0+deb13u1 util-linux/liblastlog2-2@2.41.5-0+deb13u1 util-linux/libblkid1@2.41.5-0+deb13u1&&\
     apt-get install --only-upgrade -y acl libacl1 &&\
     rm -rf /var/lib/apt/lists/* &&\
     install &&\
